@@ -33,7 +33,7 @@ Through this project I learned:
 
 ## 🔗 Live Demo
 
-Add your GitHub Pages link here.
+https://akshat-1218.github.io/Cynthia-Ugwu/
 
 ## 📌 Disclaimer
 
