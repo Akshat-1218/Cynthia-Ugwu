@@ -1,0 +1,386 @@
+@font-face {
+  font-family: "GeneralSans";
+  src: url("./GeneralSans-Regular.otf") format("opentype");
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: "GeneralSans";
+    box-sizing: border-box;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#mini-circle{
+    transition:all 0.2s ease-out;
+    height:12px;
+    width: 12px;
+    position: fixed;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+#main{
+    width: 100%;
+    background-color: black;
+}
+#hero{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 40px;
+    color: white;
+    width: 100%;
+}
+#nav a{
+    text-decoration: none;
+    z-index: 9;
+    font-size: 20px;
+    color: white;
+}
+.bounding{
+    overflow: hidden;
+    width: fit-content;
+}
+.bounding .bounding-elem{
+    transform: translateY(100%);
+}
+#heading {
+    margin-top: 50px;
+}
+#heading h1{
+    margin-left: 50px;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 9vw;
+    font-family: "GeneralSans";
+    font-weight: 900;
+    opacity: 0.7;
+}
+#heading #heading2{
+    margin-left: 230px;
+}
+#block-text{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+#block-text h5{  
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: right;
+}
+#center-head{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#center-head h5{
+    font-size: 1vw;
+    text-transform: uppercase;
+    text-align: right;
+    padding-right: 50px;
+    margin-top: 0.5vw;
+}
+
+#hero-footer{
+    padding:0 5vh;
+    position: absolute;
+    bottom: 3%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#hero-footer a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#hero-footer #icon-set{
+    display: flex;
+    gap:10px;
+}
+#hero-footer .circles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    background-color:#888;
+    border-radius: 50%;
+}
+
+#second{
+    height: 100%;
+    width: 100%;
+    padding-top:150px;
+    padding-right: 10vw;
+    padding-left: 2.3vw;
+    background-color: black;
+    color:white;
+}
+.elem{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    border-top: 1px solid #888;
+}
+.elem h1{
+    text-transform: uppercase;
+    font-size: 6.7vw;
+    opacity: 0.7;
+}
+.elem-last{
+    border-bottom: 1px solid #888;
+}
+.elem img{
+    opacity:0;
+    pointer-events: none;
+    height: 140%;
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%,-50%);
+}
+
+#about{
+    width: 100%;
+    background-color: black;
+    padding:12vw 10vw;
+    padding-left: 35vw;
+    color:white;    
+    display: flex;
+    align-items: center;
+    gap:90px;
+}
+#about img{
+    width:220px;
+}
+#text-about{
+    width: 27rem;
+    padding-top:12%;
+}
+#text-about h5{
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    opacity: .6;
+}
+#text-about p{
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+#text-about a{
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding:12px 22px;
+    color:#fff;
+}
+#text-about a:hover{
+    background-color: #fff;
+    color: black;
+    transition: all 0.5s ease-out allow-discrete;
+}
+#subscribe{
+    width: 100%;
+    background-color: black;
+    color:#fff;
+    padding: 0 40px;
+    padding-bottom: 7vw;
+}
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+    padding-bottom: 5px;
+}
+#subscribe h4 a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+}
+
+#footer{
+    background-color: black;
+    color:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 40px;
+}
+#footer-left{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+#footer-right{
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+#footer-right a{
+  text-transform: uppercase;
+    color:#fff;
+    text-decoration: none;
+}
+.underline{
+    position: relative;
+    display: inline-block; 
+    color: white;
+}
+
+.underline::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.4s ease;
+}
+.underline:hover::after{
+    width: 100%;
+}
+
+/* media queries */
+
+@media (max-width: 600px){
+
+    #mini-circle{
+        display:none;
+    }
+
+    #nav{
+        padding:20px;
+    }
+
+    #nav a,
+    #nav h3{
+        font-size:14px;
+    }
+
+    #heading{
+        margin-top:120px;
+    }
+
+    #heading h1{
+        margin-left:20px;
+        font-size:15vw;
+    }
+
+    #heading #heading2{
+        margin-left:70px;
+    }
+
+    #block-text h5{
+        font-size:12px;
+    }
+
+    #center-head{
+        margin-top:80px;
+        padding-right:20px;
+    }
+
+    #center-head h5{
+        font-size:12px;
+        padding-right:0;
+    }
+
+    #hero-footer{
+        padding:0 20px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    #hero-footer a{
+        font-size:12px;
+    }
+
+    #second{
+        padding-top:80px;
+        padding-right:20px;
+        padding-left:20px;
+    }
+
+    .elem{
+        padding:30px 0;
+    }
+
+    .elem h1{
+        font-size:9vw;
+    }
+
+    .elem h5{
+        font-size:12px;
+    }
+
+    .elem img{
+        display:none;
+    }
+
+    #about{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:80px 20px;
+        gap:40px;
+    }
+
+    #about img{
+        width:180px;
+    }
+
+    #text-about{
+        width:100%;
+        padding-top:0;
+    }
+
+    #text-about p{
+        font-size:14px;
+    }
+
+    #subscribe{
+        padding:0 20px 80px;
+    }
+
+    #subscribe h4 a{
+        font-size:14px;
+    }
+
+    #footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+        padding:20px;
+    }
+
+    #footer-left{
+        gap:15px;
+    }
+
+    #footer-right{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    #footer-right a{
+        font-size:12px;
+    }
+}
